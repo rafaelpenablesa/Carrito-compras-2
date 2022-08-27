@@ -1,6 +1,6 @@
 const clickButton = document.querySelectorAll(".button");
 const tbody = document.querySelector(".tbody");
-let carrito = [];
+let carrito = []; //* Arreglo carrito 
 
 clickButton.forEach((btn) => {
   btn.addEventListener("click", addToCarritoItem);
@@ -47,7 +47,7 @@ function addItemCarrito(newItem) {
 }
 function renderCarrito() {
   tbody.innerHTML = ''
-  carrito.map((item) => {
+  carrito.map((item) => {  //* metodo Array map
     const tr = document.createElement("tr");
     tr.classList.add("itemCarrito");
     const Content = `
@@ -74,7 +74,7 @@ function renderCarrito() {
 function carritoTotal(){
     let total = 0;
     const itemCartTotal = document.querySelector('.itemCartTotal')
-    carrito.forEach((item) => {
+    carrito.forEach((item) => { //* Metodo Array for Each
         const precio = Number(item.precio.replace("$",''))
         total = total + precio*item.cantidad
     })
@@ -90,7 +90,7 @@ function removeItemCarrito(e){
     for(let i=0; i<carrito.length; i++){
 
         if (carrito[i].title.trim() === title.trim()){
-            carrito.splice(i,1)
+            carrito.splice(i,1) //* Metodo Array Splice
         }
     }
 
@@ -108,7 +108,7 @@ function sumaCantidad(e){
     const sumaInput = e.target
     const tr = sumaInput.closest(".itemCarrito")
     const title = tr.querySelector('.title').textContent;
-    carrito.forEach(item => {
+    carrito.forEach(item => { //* Metodo Array for Each
         if(item.title.trim() === title){
             sumaInput.value < 1 ? (sumaInput.value = 1) : sumaInput.vaule;
             item.cantidad = sumaInput.value;
