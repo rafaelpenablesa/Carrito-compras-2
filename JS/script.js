@@ -152,3 +152,18 @@ window.onload =  function(){
         renderCarrito()
     }
 }
+//* Funcion nueva contacto 
+function sendEmail(){
+    Email.send({
+        SecureToken : "02434cf6-7583-403e-8ac0-75df6a3a3653",
+        To : 'rafaelpenablesa@gmail.com',
+        From : "qaguestuserspoton@gmail.com",
+        Subject : "Nuevo contacto",
+        Body : "name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> phone: " + document.getElementById("phone").value
+        + "<br> Message: " + document.getElementById("message").value
+    }).then(
+      message => alert("su mensaje a sido enviado exitosamente")
+    );
+}
