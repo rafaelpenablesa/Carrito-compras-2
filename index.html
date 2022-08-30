@@ -83,7 +83,7 @@
         </li>
         <!-- search bar -->
         <form id="form"> 
-          <input type="text" id="search-item" name="q" placeholder="Busca tu Platillo" onkeyup="search()">
+          <input type="text" id="search-item" name="q" placeholder="Busca tu Platillo"  onkeyup="search()">
           
         </form>
        
@@ -336,7 +336,18 @@
         role="tabpanel"
         aria-labelledby="pills-disabled-tab"
       >
-        4
+      <!-- formulario contacto -->  
+      <div class="containerContact">
+<form onsubmit="sendEmail(); reset(); return false;">
+  <h3>CONTACTANOS</h3>
+    <input type="text" id="name" placeholder="tu nombre" required>
+    <input type="email" id="email" placeholder="tu correo electronico" required>
+    <input type="text" id="phone" placeholder="tu telefono" required>
+    <textarea  id="message"  rows="4" placeholder="escribenos tus dudas, queremos conocer tu opinion"></textarea>
+    <button type="submit">Enviar</button>
+</form>
+
+      </div>
       </div>
     </div>
 <footer class="bg-dark p-3 mt-5">
@@ -356,5 +367,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="JS/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
