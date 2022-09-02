@@ -1,5 +1,5 @@
 
-const search = () =>{
+const search = () =>{  //* Interactuando con HTML 
     const searchbox = document.getElementById("search-item").value.toUpperCase();
     const storeitems = document.getElementById("pills-tabContent")
     const product = document.querySelectorAll(".card-body")
@@ -26,7 +26,7 @@ const tbody = document.querySelector(".tbody");
 let carrito = []; //* Arreglo carrito 
 
 clickButton.forEach((btn) => {
-  btn.addEventListener("click", addToCarritoItem);
+  btn.addEventListener("click", addToCarritoItem); // * Event Listener
 });
 
 function addToCarritoItem(e) {
