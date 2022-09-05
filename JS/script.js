@@ -167,3 +167,17 @@ function sendEmail(){
       message => alert("su mensaje a sido enviado exitosamente")
     );
 }
+//* Funcion nueva Log-in Evento listener
+
+const username =document.getElementById('username')
+const password =document.getElementById('password')
+const button = document.getElementById('button')
+
+button.addEventListener('click', (e) => {
+    e.preventDefault()
+    const data = {
+        username: username.value,
+        password: password.value
+    }
+    console.log(data)
+})

@@ -16,6 +16,7 @@
     />
 
     <link rel="stylesheet" href="CSS/Style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <header class="container-fluis bg-dark position-sticky top-0">
@@ -35,7 +36,7 @@
             aria-controls="pills-home"
             aria-selected="true"
           >
-            Home
+            Login
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -123,7 +124,22 @@
         role="tabpanel"
         aria-labelledby="pills-home-tab"
       >
-        1
+      <!-- login --> 
+      <div class="containerContact">
+        <form action="">
+          <h1 class="title">Login</h1>
+          <label >
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="username" placeholder="tu correo electronico" required>
+          </label>
+          <label >
+            <i class="fa-solid fa-key"></i>
+            <input type="password" id="password" placeholder="tu Password" required>
+          </label>
+          <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+          <button id="button">Login</button>
+        </form>
+      </div>
       </div>
       <div
         class="tab-pane fade show active container"
