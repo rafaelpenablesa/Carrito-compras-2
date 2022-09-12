@@ -141,6 +141,7 @@ function sumaCantidad(e){
     })
 
 }
+//* Local Storage
 function addLocalStorage(){
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
