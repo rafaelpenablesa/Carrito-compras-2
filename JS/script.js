@@ -152,6 +152,7 @@ window.onload =  function(){
         carrito = storage;
         renderCarrito()
     }
+
 }
 //* Funcion nueva contacto 
 function sendEmail(){
@@ -182,3 +183,11 @@ button.addEventListener('click', (e) => {
     }
     console.log(data)
 })
+//* Funcion Popup pagos
+let popup = document.getElementById("popup"); 
+function openPopup(){
+   popup.classList.add("open-popup"); 
+}   
+function closePopup(){
+    popup.classList.remove("open-popup"); 
+}
