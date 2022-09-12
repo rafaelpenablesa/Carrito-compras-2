@@ -340,7 +340,20 @@
         <div class="col">
             <h3 class="itemCartTotal">Total: 0</h3>
             <div class="col d-flex justify-content-end">
-                <button class="btn btn-success">COMPRAR</button>
+                <button type="submit" class="btn btn-success" onclick="openPopup()">Continuar pago</button>
+                <!-- formulario pago -->  
+                <div class="popup" id="popup">
+                        <div class="time-left">
+                          <time id="time">03:00</time>
+                          <h2>hellooooo</h2>
+                          <button type="button" class="btn btn-danger" onclick="closePopup()">volver a carrito</button>
+                          <button type="button" class="btn btn-success">procesar pago</button>
+                          <span></span>
+                        </div>
+                      
+                    
+                  
+                </div>
             </div>
         </div>
       </div>
