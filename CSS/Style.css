@@ -95,10 +95,12 @@ form button{
 
 .popup {
     width: 1100px;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
     background: #3b53ac;
     border-radius: 6px;
     position: absolute;
-    top: 0%;
+    top: 50%;
     left: 50%;
     transform: translate( -50%, -50%) scale(0.1);
     text-align: center;
@@ -138,6 +140,14 @@ strong {
     flex-direction: column-reverse;
     gap: 4em;
 
+}
+
+.payment form > div:not(.card-number) > div {
+    flex: 1 0 50%;
+    margin: 0.5em 0;
+}
+.payment .left p {
+    font-size: var(...);
 }
 
 
