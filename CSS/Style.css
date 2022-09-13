@@ -94,7 +94,7 @@ form button{
 }
 
 .popup {
-    width: 400px;
+    width: 1100px;
     background: #3b53ac;
     border-radius: 6px;
     position: absolute;
@@ -102,10 +102,15 @@ form button{
     left: 50%;
     transform: translate( -50%, -50%) scale(0.1);
     text-align: center;
-    padding: 0 30px 30px;
+    padding: 0 1em;
     color: #333;
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.0;
+    background-color: #f9f5f5;
+    scroll-behavior: auto;
 }
 
 .open-popup{
@@ -113,3 +118,36 @@ form button{
     top: 50%;
     transform: translate( -50%, -50%) scale(1);
 }
+a {
+text-decoration: none;
+color: inherit;
+}
+ul{
+    list-style: none;
+}
+strong {
+    font-weight: 800;
+}
+
+.payment, .payment :where(form > div:not(.card-number), .card-exp .input) {
+    display: flex;
+    align-items: center;
+}
+
+.payment {
+    flex-direction: column-reverse;
+    gap: 4em;
+
+}
+
+
+.payment {
+        flex-direction: row;
+        gap: 0;
+    }
+.payment .left {
+    flex: 1 0 65%;
+    padding-right: 4em;
+
+
+    }

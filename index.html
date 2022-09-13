@@ -342,13 +342,88 @@
             <div class="col d-flex justify-content-end">
                 <button type="submit" class="btn btn-success" onclick="openPopup()">Continuar pago</button>
                 <!-- formulario pago -->  
-                <div class="popup" id="popup">
+                <div class="popup" id="popup" >
                         <div class="time-left">
                           <time id="time">03:00</time>
-                          <h2>hellooooo</h2>
+                          <span>Tiempo restante</span>
+                          <section class="Payment">
+                            <div class="left">
+                              <form action="" method="post">
+                                  <div class="card-number">
+                                    <p>Numero de tarjeta</p>
+                                    <span>Ingrese los 16 digitos de su tarjeta </span>
+                                    <div class="card-number-box">
+                                      <input type="text" id="credit-card" autocomplete="off" placeholder="xxxx - xxxx - xxxx - xxxx">
+                                      <span class="cc-logo"></span>
+                                    </div>
+                                  </div>
+                                  <div class="card-holder"></div>
+                                  <div class="text">
+                                    <p>Nombre Titular Tarjeta</p>
+                                    <span>Ingrese nombre completo del titular de la tarjeta </span>
+                                    <div class="input">
+                                      <input type="text" id="card-name" autocomplete="off" placeholder="Rafael Lopez Lopez" required>
+                                    </div>
+                                  </div>
+                                  <div class="card-cvv"></div>
+                                    <div class="text">
+                                      <p>Codigo CVV</p>
+                                      <Span>ingrese los 3 o 4 digitos que se muestran al reverso de su tarjeta</SPan>
+                                    </div>
+                                    <div class="input">
+                                      <input type="number" data-maxlenght="4" required oninput="this.value=this.value.slice(0,this.dataset.maxlenght)" />
+                                    </div>
+                                  
+
+                                  <div class="card-expiration"></div>
+                                  <div class="text">
+                                    <p>vencimiento</p>
+                                    <span>entre fecha de vencimiento</span>
+                                  </div>
+                                  <div class="input">
+                                    <input type="number" id="exp-month" placeholder="MM" data-maxlenght="2" required oninput="this.value=this.value.slice(0,this.dataset.maxlenght)" />
+                                    <strong> / </strong>
+                                    <input type="number" id="exp-year" placeholder="YY"  data-maxlenght="2" required oninput="this.value=this.value.slice(0,this.dataset.maxlenght)" />
+                                  </div>
+                              </form>
+                            </div>
+                            <div class="right"> 
+                              <div class="card-virtual">
+                                <p class="cc-logo"></p>
+                                <p class="name-holder">Rafael Lopez Lopez</p>
+                                <p class="chip"></p>
+                                <p class="highlight">
+                                  <span class="last-digit" id="card-number">.... .... .... 4895</span>
+                                  <span class="expiry">
+                                    <span class="exp-month">09</span> /
+                                    <span class="exp-year"></span>
+                                  </span>
+                                </p>
+                              </div>
+                              <div class="receipt">
+                                <ul>
+                                  <li>
+                                    <span>Order Number</span>
+                                    <span>1212316</span>
+                                  </li>
+                                  <li>
+                                    <span>Product</span>
+                                    <span>Product</span>
+                                  </li>
+                                  <li>
+                                    <span>Impuesto </span>
+                                    <span>total</span>
+                                  </li>
+                                </ul>
+                                <div class="total">
+                                  <p class="price"><strong>4.56</strong>USD</p>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
                           <button type="button" class="btn btn-danger" onclick="closePopup()">volver a carrito</button>
                           <button type="button" class="btn btn-success">procesar pago</button>
-                          <span></span>
+                          
                         </div>
                       
                     
