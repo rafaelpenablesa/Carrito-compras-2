@@ -46,11 +46,9 @@ function addToCarritoItem(e) {
 }
 
 function addItemCarrito(newItem) {
-    const alert = document.querySelector('.alert')
-    setTimeout(function (){
-        alert.classList.add('hide')
-    },2000)
-    alert.classList.remove('hide')
+    //* Sweet Alert agregar a carrito
+    swal("Exito", "Tu platillo a sido agregado al carrito", "success");
+  
 
 
     const inputElemento = tbody.getElementsByClassName('input__elemento')
@@ -107,6 +105,8 @@ function carritoTotal(){
 
 }
 function removeItemCarrito(e){
+    //* Sweet Alert
+    swal("advertencia", "producto a sido retirado de su carrito", "warning");
     const buttonDelete = e.target
     const tr = buttonDelete.closest(".itemCarrito")
     const title = tr.querySelector('.title').textContent;
@@ -117,11 +117,7 @@ function removeItemCarrito(e){
         }
     }
 
-    const alert = document.querySelector('.remove')
-    setTimeout(function (){
-        alert.classList.add('remove')
-    },2000)
-    alert.classList.remove('remove')
+   
 
     tr.remove()
     carritoTotal()
