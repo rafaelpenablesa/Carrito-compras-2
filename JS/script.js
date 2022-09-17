@@ -46,9 +46,16 @@ function addToCarritoItem(e) {
 }
 
 function addItemCarrito(newItem) {
-    //* Sweet Alert agregar a carrito
-    swal("Exito", "Tu platillo a sido agregado al carrito", "success");
-  
+    //* Toastify
+    
+    Toastify({
+
+        text: "Tu platillo a sido agregado al carrito",
+        
+        duration: 3000
+        
+        
+        }).showToast();
 
 
     const inputElemento = tbody.getElementsByClassName('input__elemento')
