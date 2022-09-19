@@ -61,9 +61,9 @@ d.addEventListener("click",(e) => {
         Stripe(STRIPE_KEYS.public)
         .redirectToCheckout({
          lineItems:[{price, quantity: 1}],
-         mode: "subscription",
+         mode: "payment",
          successUrl: "http://127.0.0.1:5500/stripe-sucess.html",
-         cancelUrl: "http://127.0.0.1:5500/stripe-cancel.html",   
+         cancelUrl: "http://127.0.0.1:5500/index.html",   
         })
         .then(res => {
             console.log(res);
