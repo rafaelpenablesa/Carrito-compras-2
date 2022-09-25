@@ -63,7 +63,7 @@ d.addEventListener("click",(e) => {
          lineItems:[{price, quantity: 1}],
          mode: "payment",
          successUrl: "http://127.0.0.1:5500/stripe-sucess.html",
-         cancelUrl: "http://127.0.0.1:5500/index.html",   
+         cancelUrl: "https://rafaelpenablesa.github.io/Carrito-compras-2/",   
         })
         .then(res => {
             console.log(res);
